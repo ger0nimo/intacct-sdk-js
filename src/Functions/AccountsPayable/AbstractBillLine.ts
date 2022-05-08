@@ -37,6 +37,7 @@ export default abstract class AbstractBillLine implements IXmlObject {
     public locationId: string;
     public projectId: string;
     public taskId: string;
+    public costTypeId: string;
     public customerId: string;
     public vendorId: string;
     public employeeId: string;
