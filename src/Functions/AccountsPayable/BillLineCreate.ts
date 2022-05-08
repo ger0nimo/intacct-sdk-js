@@ -46,6 +46,7 @@ export default class BillLineCreate extends AbstractBillLine {
 
         xml.writeElement("projectid", this.projectId);
         xml.writeElement("taskid", this.taskId);
+        xml.writeElement("costtypeid", this.costTypeId);
         xml.writeElement("customerid", this.customerId);
         xml.writeElement("vendorid", this.vendorId);
         xml.writeElement("employeeid", this.employeeId);
