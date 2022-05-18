@@ -73,6 +73,7 @@ export default class PurchasingTransactionCreate extends AbstractPurchasingTrans
         xml.writeCustomFieldsExplicit(this.customFields);
 
         xml.writeElement("state", this.state);
+        xml.writeElement("projectid", this.projectId);
 
         xml.writeStartElement("potransitems");
         if (this.lines != null && this.lines.length > 0) {
