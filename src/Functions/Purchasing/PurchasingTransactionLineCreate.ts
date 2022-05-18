@@ -37,6 +37,8 @@ export default class PurchasingTransactionLineCreate extends AbstractPurchasingT
         xml.writeElement("locationid", this.locationId);
         xml.writeElement("departmentid", this.departmentId);
         xml.writeElement("memo", this.memo);
+        xml.writeElement("taskid", this.taskid);
+        
 
         if (this.itemDetails != null && this.itemDetails.length > 0) {
             xml.writeStartElement("itemdetails");
