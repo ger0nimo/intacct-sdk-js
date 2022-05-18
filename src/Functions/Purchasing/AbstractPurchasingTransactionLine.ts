@@ -39,12 +39,13 @@ export default abstract class AbstractPurchasingTransactionLine implements IXmlO
     public departmentId: string;
     public locationId: string;
     public projectId: string;
+    public taskId: string;
+    public costTypeId: string;
     public customerId: string;
     public vendorId: string;
     public employeeId: string;
     public classId: string;
     public contractId: string;
-    public taskId: string;
     public customFields: Array<[string, any]> = [];
 
     public abstract writeXml(xml: IaXmlWriter): void;
