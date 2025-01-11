@@ -17,6 +17,8 @@ import * as OrderEntry from "./OrderEntry/index";
 import * as PlatformServices from "./PlatformServices/index";
 import * as Projects from "./Projects/index";
 import * as Purchasing from "./Purchasing/index";
+import * as Construction from "./Construction/index";
+
 export {
     AccountsPayable,
     AccountsReceivable,
@@ -33,4 +35,5 @@ export {
     PlatformServices,
     Projects,
     Purchasing,
+    Construction
 };

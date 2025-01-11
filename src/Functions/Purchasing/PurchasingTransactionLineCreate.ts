@@ -32,12 +32,13 @@ export default class PurchasingTransactionLineCreate extends AbstractPurchasingT
         xml.writeElement("quantity", this.quantity, true);
         xml.writeElement("unit", this.unit);
         xml.writeElement("price", this.price);
+        xml.writeElement("sourcelinekey", this.sourcelinekey);
         xml.writeElement("overridetaxamount", this.overrideTaxAmount);
         xml.writeElement("tax", this.tax);
         xml.writeElement("locationid", this.locationId);
         xml.writeElement("departmentid", this.departmentId);
         xml.writeElement("memo", this.memo);
-      
+        
         
 
         if (this.itemDetails != null && this.itemDetails.length > 0) {
@@ -60,8 +61,10 @@ export default class PurchasingTransactionLineCreate extends AbstractPurchasingT
         xml.writeElement("employeeid", this.employeeId);
         xml.writeElement("classid", this.classId);
         xml.writeElement("contractid", this.contractId);
+        xml.writeElement("conversiontype", this.conversionType);
         xml.writeElement("billable", this.billable);
-
+        xml.writeElement("sourcedocid", this.sourcekey);
+        xml.writeElement("sourcedoclineid", this.sourcedoclineid);
         xml.writeEndElement(); // potransitem
     }
 }

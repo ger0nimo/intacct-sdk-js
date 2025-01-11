@@ -18,42 +18,28 @@
  */
 
 import IaXmlWriter from "../../Xml/IaXmlWriter";
-import AbstractInventoryTransactionLine from "./AbstractInventoryTransactionLine";
+import AbstractWarehouseTransferLine from "./AbstractWarehouseTransferLine";
 
-export default class InventoryTransactionLineCreate extends AbstractInventoryTransactionLine {
+export default class WarehouseTransferLineCreate extends AbstractWarehouseTransferLine {
 
     public writeXml(xml: IaXmlWriter): void {
-        xml.writeStartElement("ictransitem");
-
+      
+        xml.writeElement("in_out", this.inOut, true);
         xml.writeElement("itemid", this.itemId, true);
-        xml.writeElement("itemdesc", this.itemDescription);
+        xml.writeElement("memo", this.memo);
         xml.writeElement("warehouseid", this.warehouseId);
         xml.writeElement("quantity", this.quantity, true);
         xml.writeElement("unit", this.unit);
         xml.writeElement("cost", this.cost);
-       
         xml.writeElement("locationid", this.locationId);
         xml.writeElement("departmentid", this.departmentId);
-
-        if (this.itemDetails != null && this.itemDetails.length > 0) {
-            xml.writeStartElement("itemdetails");
-            for (const itemDetail of this.itemDetails) {
-                itemDetail.writeXml(xml);
-            }
-            xml.writeEndElement(); // itemdetails
-        }
-
         xml.writeCustomFieldsExplicit(this.customFields);
-
         xml.writeElement("projectid", this.projectId);
-        xml.writeElement("taskid", this.taskId);
-        xml.writeElement("costtypeid", this.costTypeId);
         xml.writeElement("customerid", this.customerId);
         xml.writeElement("vendorid", this.vendorId);
         xml.writeElement("employeeid", this.employeeId);
         xml.writeElement("classid", this.classId);
-        xml.writeElement("contractid", this.contractId);
+        //xml.writeElement("contractid", this.contractId);
 
-        xml.writeEndElement(); // ictransitem
     }
 }

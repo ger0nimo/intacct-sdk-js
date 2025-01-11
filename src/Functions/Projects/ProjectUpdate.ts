@@ -42,6 +42,7 @@ export default class ProjectUpdate extends AbstractProject {
         xml.writeElement("MANAGERID", this.projectManagerEmployeeId);
         xml.writeElement("CUSTUSERID", this.externalUserId);
         xml.writeElement("SALESCONTACTID", this.salesContactEmployeeId);
+        xml.writeElement("SF_OPPORTUNITY_NUMBER",this.salesforceOpportunityNo);
         xml.writeElement("DOCNUMBER", this.referenceNo);
         xml.writeElement("USERRESTRICTIONS", this.userRestrictions);
 
@@ -103,6 +104,57 @@ export default class ProjectUpdate extends AbstractProject {
         xml.writeElement("BUDGETID", this.glBudgetId);
         xml.writeElement("INVOICEMESSAGE", this.invoiceMessage);
         xml.writeElement("INVOICECURRENCY", this.invoiceCurrency);
+        xml.writeElement("PROJ_CONSTRUCTION_TYPE", this.constructionType);
+        xml.writeElement("DESIGN_ENGINEER", this.designEngineer);
+        xml.writeElement("PROJ_JOB_CITY", this.jobCity);
+        xml.writeElement("PROJ_PROJECT_COORDINATOR", this.projectCoordinator);
+
+        xml.writeElement("PROJ_BILLING_DUE_DATE", this.billingDuedate);
+        xml.writeElement("PROJ_SALES_PERSON", this.salesPerson);
+        xml.writeElement("PROJ_BILLING_CONTACTS", this.billingContacts);
+        xml.writeElement("PROJ_OCIP", this.ocip);
+        xml.writeElement("CLOSEOUT_COMPLETE", this.closeComplete);
+        xml.writeElement("PROJ_OCIP_EXCESS", this.ocipExcess);
+        xml.writeElement("PROJ_OCIP_WORKERS_COMP", this.ocipWC);
+        xml.writeElement("PROJ_OCIP_LIABILITY", this.ocipGL);
+        xml.writeElement("PROJ_OCIP_PLATFORM", this.ocipPlatform);
+
+        xml.writeElement("SF_OPPORTUNITY_NUMBER", this.sfOpportunityNumber);
+        xml.writeElement("PROJ_PERMITS_REINBURSABLE", this.permitReinbursable);
+        xml.writeElement("PROJ_COMPLIANCE_ASSIGNED_TO", this.complianceAssignedTo);
+        xml.writeElement("PROJ_CONSTRUCTION_MANAGER", this.constructionManager);
+
+        xml.writeElement("PROJ_CONTRACT_SOV_LINES", this.contractSovLines);
+        xml.writeElement("PROJ_COST_CODES_FINAL", this.costcodesFinal);
+        xml.writeElement("PROJ_CSI_COI_ON_FILE", this.csiOnFile);
+        xml.writeElement("PROJ_ESTIMATE_FROM_ACCT_BID_TOOL", this.estimateFromAcctBidTool);
+        xml.writeElement("PROJ_FINAL_CONTRACT_AND_BILLING_INFO", this.finalContractAndBillingInfo);
+        //LABOR COMPLIANCE
+        xml.writeElement("PROJ_LC_CPR_PLATFORM", this.lcCPRPlatform);
+        xml.writeElement("PROJ_BONDED", this.bonded);
+        xml.writeElement("PROJ_LC_DIR_NUMBER", this.lcDIRNumber);
+        xml.writeElement("PROJ_LC_DIR_WORK_DAY", this.lcDIRWorkDay);
+        xml.writeElementDate("PROJ_LC_FINAL_CPR_DATE", this.lcFinalCPRDate, IaXmlWriter.intacctDateFormat);
+        xml.writeElementDate("PROJ_LC_UP_TO_LATEST_CPR_FORM_FILLED", this.lcUpToLatestCPRFormFilled, IaXmlWriter.intacctDateFormat);
+        xml.writeElementDate("PROJ_LC_UP_TO_LATEST_ENTERED_TO_DIR", this.lcUpToLatestEnteredDir, IaXmlWriter.intacctDateFormat);
+        xml.writeElementDate("PROJ_MILESTONE_ESTIMATE_ATTACHMENT_ROUGHIN", this.milestoneEstimateAttachmentRoughin,IaXmlWriter.intacctDateFormat);
+        xml.writeElement("PROJ_LC_LCP_ACCOUNT", this.lcLcpAccount);
+        xml.writeElement("PROJ_PW_REQUIREMENTS", this.pwRequirements);
+        xml.writeElement("TARGET_GP", this.targetGP);
+        xml.writeElement("PROJ_AR_ASSIGNED", this.arAssigned);
+        xml.writeElement("PROJ_ADDRESS", this.projectAddress);
+        xml.writeElement("PROJECT_SETUP_COMPLETE", this.projectSetupComplete);
+ 
+
+        
+        
+        
+        
+        
+        
+        
+
+
 
         xml.writeCustomFieldsImplicit(this.customFields);
 

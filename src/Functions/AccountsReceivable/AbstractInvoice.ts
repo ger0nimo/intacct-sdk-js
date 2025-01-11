@@ -45,6 +45,8 @@ export default abstract class AbstractInvoice extends AbstractFunction {
     public billToContactName: string;
     public shipToContactName: string;
     public attachmentsId: string;
+    public collectionNotes: string;
+    public collectionStatus: string;
     public lines: AbstractInvoiceLine[];
 
     public customFields: Array<[string, any]> = [];

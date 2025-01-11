@@ -38,7 +38,10 @@ export default abstract class AbstractTask extends AbstractFunction {
     public timeType: string;
     public parentTaskRecordNo: number;
     public attachmentsId: string;
-
+    // Customize added March 10 - Orlando
+    public standardTaskId: string;
+    public taskId: string;
+    
     // TODO implement observedPercentComplete as separate object like other SDK's
 
     public plannedDuration: number;

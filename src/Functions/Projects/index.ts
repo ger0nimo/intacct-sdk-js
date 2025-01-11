@@ -5,6 +5,7 @@ export { default as AbstractTimesheetEntry } from "./AbstractTimesheetEntry";
 export { default as ProjectCreate } from "./ProjectCreate";
 export { default as ProjectDelete } from "./ProjectDelete";
 export { default as ProjectUpdate } from "./ProjectUpdate";
+export { default as ProjectContractUpdate } from "./ProjectContractUpdate";
 export { default as TaskCreate } from "./TaskCreate";
 export { default as TaskDelete } from "./TaskDelete";
 export { default as TaskUpdate } from "./TaskUpdate";

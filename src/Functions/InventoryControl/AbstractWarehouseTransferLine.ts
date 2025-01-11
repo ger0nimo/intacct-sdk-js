@@ -19,17 +19,16 @@
 
 import IaXmlWriter from "../../Xml/IaXmlWriter";
 import IXmlObject from "../../Xml/IXmlObject";
-import AbstractTransactionItemDetail from "./AbstractTransactionItemDetail";
 
-export default abstract class AbstractInventoryTransactionLine implements IXmlObject {
+export default abstract class AbstractWarehouseTransferLine implements IXmlObject {
 
+    public inOut: string;
     public itemId: string;
-    public itemDescription: string;
+    public memo: string;
     public warehouseId: string;
     public quantity: number;
     public unit: string;
     public cost: number;
-    public itemDetails: AbstractTransactionItemDetail[];
     public departmentId: string;
     public locationId: string;
     public projectId: string;
@@ -38,9 +37,9 @@ export default abstract class AbstractInventoryTransactionLine implements IXmlOb
     public employeeId: string;
     public classId: string;
     public contractId: string;
-    public taskId: string;
-    public costTypeId: string;
     public customFields: Array<[string, any]> = [];
 
     public abstract writeXml(xml: IaXmlWriter): void;
+
+
 }

@@ -105,7 +105,11 @@ export default class ProjectCreate extends AbstractProject {
         xml.writeElement("BUDGETID", this.glBudgetId);
         xml.writeElement("INVOICEMESSAGE", this.invoiceMessage);
         xml.writeElement("INVOICECURRENCY", this.invoiceCurrency);
-
+        xml.writeElement("PROJ_CONSTRUCTION_TYPE", this.constructionType);
+        xml.writeElement("DESIGN_ENGINEER", this.designEngineer);
+        xml.writeElement("PROJ_JOB_CITY", this.jobCity);
+        xml.writeElement("PROJ_PROJECT_COORDINATOR", this.projectCoordinator);
+        xml.writeElement("PROJ_AR_ASSIGNED", this.arAssigned);
         xml.writeCustomFieldsImplicit(this.customFields);
 
         xml.writeEndElement(); // PROJECT

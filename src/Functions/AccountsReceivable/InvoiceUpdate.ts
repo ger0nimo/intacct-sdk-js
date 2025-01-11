@@ -62,6 +62,10 @@ export default class InvoiceUpdate extends AbstractInvoice {
         xml.writeElement("invoiceno", this.invoiceNumber);
         xml.writeElement("ponumber", this.referenceNumber);
         xml.writeElement("description", this.description);
+        xml.writeElement("collection_notes", this.collectionNotes);
+        xml.writeElement("collection_status", this.collectionStatus);
+        
+        
 
         if (this.billToContactName != null) {
             xml.writeStartElement("payto");

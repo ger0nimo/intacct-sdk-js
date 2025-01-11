@@ -48,6 +48,10 @@ export default class TaskCreate extends AbstractTask {
         xml.writeElement("SUPDOCID", this.attachmentsId);
         xml.writeElement("BUDGETQTY", this.plannedDuration);
         xml.writeElement("ESTQTY", this.estimatedDuration);
+        
+        xml.writeElement("STANDARDTASKID", this.standardTaskId);
+        xml.writeElement("TASKID", this.taskId);
+       
 
         xml.writeCustomFieldsImplicit(this.customFields);
 

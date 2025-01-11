@@ -35,6 +35,7 @@ export default class PurchasingTransactionLineUpdate extends AbstractPurchasingT
         xml.writeElement("quantity", this.quantity);
         xml.writeElement("unit", this.unit);
         xml.writeElement("price", this.price);
+        xml.writeElement("sourcelinekey", this.sourcelinekey);
         xml.writeElement("locationid", this.locationId);
         xml.writeElement("departmentid", this.departmentId);
         xml.writeElement("memo", this.memo);
@@ -58,7 +59,8 @@ export default class PurchasingTransactionLineUpdate extends AbstractPurchasingT
         xml.writeElement("classid", this.classId);
         xml.writeElement("contractid", this.contractId);
         xml.writeElement("billable", this.billable);
-
+        xml.writeElement("sourcedocid", this.sourcekey);
+        xml.writeElement("sourcedoclineid", this.sourcedoclineid);
         xml.writeEndElement(); // updatepotransitem
     }
 }

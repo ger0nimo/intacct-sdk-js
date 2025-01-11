@@ -45,6 +45,8 @@ export default abstract class AbstractProject extends AbstractFunction {
 
     public salesContactEmployeeId: string;
 
+    public salesforceOpportunityNo: string;
+
     public referenceNo: string;
 
     public userRestrictions: string;
@@ -118,4 +120,51 @@ export default abstract class AbstractProject extends AbstractFunction {
     public invoiceCurrency: string;
 
     public customFields: Array<[string, any]> = [];
+
+    public constructionType: string;
+
+    public designEngineer: string;
+
+    public jobCity: string;
+
+    public projectCoordinator: string;
+
+    public billingDuedate: string;
+    public complianceAssignedTo: string;
+    public salesPerson: string;
+    public billingContacts: string;
+    public ocip: boolean;
+    public ocipExcess: string;
+    public ocipWC: string;
+    public ocipGL: string;
+    public ocipPlatform: string;
+ 	public projectSetupComplete: boolean;//PROJECT_SETUP_COMPLETE
+    public contractSovLines: boolean; //PROJ_CSI_COI_ON_FILE
+    public estimateFromAcctBidTool: boolean; //PROJ_ESTIMATE_FROM_ACCT_BID_TOOL
+    public costcodesFinal: boolean; //PROJ_COST_CODES_FINAL
+    public csiOnFile: boolean; //PROJ_CSI_COI_ON_FILE
+    public finalContractAndBillingInfo: boolean; //PROJ_FINAL_CONTRACT_AND_BILLING_INFO
+
+    public permitReinbursable: string;
+    public sfOpportunityNumber: string;
+    public constructionManager: string;
+
+    public lcCPRPlatform: string;
+    public lcDIRNumber: string;
+    public lcDIRWorkDay: string;
+
+
+    public lcFinalCPRDate: Date;
+    public lcUpToLatestCPRFormFilled: Date;
+    public lcUpToLatestEnteredDir: Date;
+    public milestoneEstimateAttachmentRoughin: Date;
+    public lcLcpAccount: string;
+    public pwRequirements: string;
+    public targetGP: string;
+    public arAssigned: string;
+    public projectAddress: string;
+    public closeComplete:boolean; 
+    public bonded:boolean;      
+
+
 }

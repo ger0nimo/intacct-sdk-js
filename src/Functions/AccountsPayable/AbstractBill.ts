@@ -39,6 +39,7 @@ export default abstract class AbstractBill extends AbstractFunction {
     public exchangeRateType: string;
     public doNotPostToGl: boolean;
     public dueDate: Date;
+    public state: string;
     public paymentTerm: string;
     public referenceNumber: string;
     public onHold: boolean;

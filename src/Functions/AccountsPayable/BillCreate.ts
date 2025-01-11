@@ -50,6 +50,8 @@ export default class BillCreate extends AbstractBill {
         }
 
         xml.writeElement("action", this.action);
+        xml.writeElement("state", this.state);
+        
         xml.writeElement("batchkey", this.summaryRecordNo);
         xml.writeElement("billno", this.billNumber);
         xml.writeElement("ponumber", this.referenceNumber);
